@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Podman Java Web App</title>
+</head>
+<body>
+    <h1>Welcome to Podman Java Web App</h1>
+    <p id="message"></p>
+    <script>
+        fetch('/api/hello')
+            .then(response => response.text())
+            .then(data => document.getElementById('message').textContent = data);
+    </script>
+</body>
+</html>
+
